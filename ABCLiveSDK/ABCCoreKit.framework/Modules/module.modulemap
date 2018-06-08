@@ -1,0 +1,6 @@
+framework module ABCCoreKit {
+  umbrella header "ABCCoreKit.h"
+
+  export *
+  module * { export * }
+}
