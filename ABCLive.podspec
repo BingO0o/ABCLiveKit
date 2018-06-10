@@ -2,12 +2,12 @@ Pod::Spec.new do |s|
   s.name             = "ABCLive"
   s.version          = "1.0.0"
   s.summary          = "ABCLive."
-  s.description      = "ABCPaiti of bing"
+  s.description      = "ABCLive of bing"
   s.homepage         = "http://www.abcpen.com"
   s.license          = 'MIT'
   s.author           = { "bing" => "bing@abcpen.com" }
   s.source           = { :git => 'https://github.com/BingO0o/ABCLiveKit.git' }
-  s.platform         = :ios, '9.0'
+  s.platform         = :ios,'9.0'
   s.requires_arc     = true
 
   s.subspec 'ABCLiveCoreKit' do |sp|
