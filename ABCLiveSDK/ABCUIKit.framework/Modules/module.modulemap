@@ -1,0 +1,6 @@
+framework module ABCUIKit {
+  umbrella header "ABCUIKit.h"
+
+  export *
+  module * { export * }
+}

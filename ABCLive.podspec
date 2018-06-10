@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'ABCLiveUIKit' do |sp|
-    sp.public_header_files = 'ABCLiveSDK/ABCUIKit.framework/Headers/ABCLiveKit.h'
+    sp.public_header_files = 'ABCLiveSDK/ABCUIKit.framework/Headers/ABCUIKit.h'
     sp.source_files        = 'ABCLiveSDK/ABCUIKit.framework/Headers/*.{h}'
     sp.vendored_frameworks = 'ABCLiveSDK/ABCUIKit.framework'
     sp.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO' }
