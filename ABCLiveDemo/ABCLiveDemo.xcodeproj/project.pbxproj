@@ -18,6 +18,8 @@
 		D74CD7FB20CE53BE00C04EEC /* ABCLiveDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D74CD7FA20CE53BE00C04EEC /* ABCLiveDemoUITests.m */; };
 		D74CD80920CE55BA00C04EEC /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74CD80820CE55BA00C04EEC /* SocketIO.framework */; };
 		D74CD80A20CE55BA00C04EEC /* SocketIO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D74CD80820CE55BA00C04EEC /* SocketIO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D7C9C52820CFF58E002DC7E3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C52620CFF58E002DC7E3 /* MainViewController.m */; };
+		D7C9C52920CFF58E002DC7E3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C9C52720CFF58E002DC7E3 /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,9 @@
 		D74CD7FA20CE53BE00C04EEC /* ABCLiveDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABCLiveDemoUITests.m; sourceTree = "<group>"; };
 		D74CD7FC20CE53BE00C04EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D74CD80820CE55BA00C04EEC /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketIO.framework; path = ../ABCLiveSDK/SocketIO.framework; sourceTree = "<group>"; };
+		D7C9C52520CFF58E002DC7E3 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		D7C9C52620CFF58E002DC7E3 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		D7C9C52720CFF58E002DC7E3 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		DB238C69F7DD1D90045F3289 /* Pods-ABCLiveDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABCLiveDemo.release.xcconfig"; path = "../Pods/Target Support Files/Pods-ABCLiveDemo/Pods-ABCLiveDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +158,9 @@
 				D74CD7E120CE53BE00C04EEC /* LaunchScreen.storyboard */,
 				D74CD7E420CE53BE00C04EEC /* Info.plist */,
 				D74CD7E520CE53BE00C04EEC /* main.m */,
+				D7C9C52520CFF58E002DC7E3 /* MainViewController.h */,
+				D7C9C52620CFF58E002DC7E3 /* MainViewController.m */,
+				D7C9C52720CFF58E002DC7E3 /* MainViewController.xib */,
 			);
 			path = ABCLiveDemo;
 			sourceTree = "<group>";
@@ -284,6 +292,7 @@
 				D74CD7E320CE53BE00C04EEC /* LaunchScreen.storyboard in Resources */,
 				D74CD7E020CE53BE00C04EEC /* Assets.xcassets in Resources */,
 				D74CD7DE20CE53BC00C04EEC /* Main.storyboard in Resources */,
+				D7C9C52920CFF58E002DC7E3 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +363,7 @@
 				D74CD7DB20CE53BC00C04EEC /* ViewController.m in Sources */,
 				D74CD7E620CE53BE00C04EEC /* main.m in Sources */,
 				D74CD7D820CE53BC00C04EEC /* AppDelegate.m in Sources */,
+				D7C9C52820CFF58E002DC7E3 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,7 +538,10 @@
 				DEVELOPMENT_TEAM = XYH562EV4N;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ABCLiveDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abcpen.ABCLiveDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "06761f26-04e8-4093-af83-c4984b20f191";
@@ -547,7 +560,10 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ABCLiveDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abcpen.ABCLiveDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -562,7 +578,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYH562EV4N;
 				INFOPLIST_FILE = ABCLiveDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abcpen.ABCLiveDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -577,7 +597,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYH562EV4N;
 				INFOPLIST_FILE = ABCLiveDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abcpen.ABCLiveDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -591,7 +615,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYH562EV4N;
 				INFOPLIST_FILE = ABCLiveDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abcpen.ABCLiveDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -605,7 +633,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYH562EV4N;
 				INFOPLIST_FILE = ABCLiveDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abcpen.ABCLiveDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

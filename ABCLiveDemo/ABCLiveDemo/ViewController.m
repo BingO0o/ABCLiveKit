@@ -11,19 +11,11 @@
 #import <AFNetworking.h>
 #include <CommonCrypto/CommonCrypto.h>
 
-#define IS_DEBUG
+#import "MainViewController.h"
 
-#ifdef IS_DEBUG
-#define ABC_LIVE_APP_ID     @"plGvg74ZG82Mv7VRoDgUYVRyCwfxW0kT"
-#define ABC_LIVE_APP_SECRET @"PSZ2i0ZilUf0i0a7Ng9PRvw3UjzJekD"
-#define AUTH_DOMAIN         @"http://open-test.abcpen.com"
-//#define ABC_LIVE_APP_ID     @"Y35JhfuH6nBZhVTtKePWLaAl1OHL8rd9"   //健客
-//#define ABC_LIVE_APP_SECRET @"mhlXkfht0FKeU1ehIzfrSxhcZgzlHrnp"
-#else
-#define ABC_LIVE_APP_ID     @"93boVMNpj7fRGKgi6jCq1amgxBdldGyb"  //正式环境
-#define ABC_LIVE_APP_SECRET @"i5bdeGPrbMVc22wqpxtgk2AfCaeMfDY6"
+#define ABC_LIVE_APP_ID     @""
+#define ABC_LIVE_APP_SECRET @""
 #define AUTH_DOMAIN         @"https://open.abcpen.com"
-#endif
 
 @interface ViewController ()
 
@@ -60,6 +52,7 @@
             userMo.nickName = self.textNickName.text;
             [[ABCLiveSDK shareABCLiveSDK] initWithToken:[responseObject objectForKey:@"data"]];
             [ABCLiveSDK shareABCLiveSDK].curUserMo = userMo;
+            [self presentViewController:[MainViewController new] animated:YES completion:nil] ;
         }else{
             NSLog(@"%@", [responseObject objectForKey:@"errorMsg"]);
         }

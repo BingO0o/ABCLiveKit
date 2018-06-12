@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <ABCCoreKit/ABCLiveSDK.h>
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +21,10 @@
     // Override point for customization after application launch.
     [ABCLiveSDK shareABCLiveSDK].isDebug = YES;
     [ABCLiveSDK shareABCLiveSDK].isLocal = YES;
-    [[ABCLiveSDK shareABCLiveSDK] initWithToken:@"eyJhbGciOiJIUzI1NiJ9.eyJsYXN0TG9naW5UaW1lIjoxNTI4NzAwNjQ3MTgyLCJvcGVuSWQiOiIxMDg1NzY5IiwiYXBwSWQiOiJwbEd2Zzc0Wkc4Mk12N1ZSb0RnVVlWUnlDd2Z4VzBrVCIsIm9wZW5JZFR5cGUiOiIxMSIsImlzcyI6IkFiY1BlbiIsImV4cCI6MTUzODcwMDY0NzE4MiwidXNlcklkIjo2MTgyNywiaWF0IjoxNTI4NzAwNjQ3MTgyLCJqdGkiOiIxLjAifQ.UIHfd2Z9gJPMzUFVvzMx60Gy6fF4MJbJ2s4FfmJm3KU"];
+    if([ABCLiveSDK shareABCLiveSDK].isLogin){
+        self.window.rootViewController = [[MainViewController alloc] init];
+        [self.window makeKeyAndVisible];
+    }
     return YES;
 }
 

@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage         = "http://www.abcpen.com"
   s.license          = 'MIT'
   s.author           = { "bing" => "bing@abcpen.com" }
-  s.source           = { :git => 'git@git.abcpen.com:pod_group/ABCLiveKit-Pod.git'}#'https://github.com/BingO0o/ABCLiveKit.git'
+  s.source           = { :git => 'https://github.com/BingO0o/ABCLiveKit.git'}#'git@git.abcpen.com:pod_group/ABCLiveKit-Pod.git'
   s.platform         = :ios,'9.0'
   s.requires_arc     = true
 
