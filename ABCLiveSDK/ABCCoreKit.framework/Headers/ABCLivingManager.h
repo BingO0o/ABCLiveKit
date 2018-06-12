@@ -23,22 +23,22 @@
  *
  *  @return ABCLivingManager
  */
--(instancetype) initABCLivingManager:(NSString *) rid isPush:(BOOL) isPush isSuperManager:(BOOL) isSuperManager isrecord:(NSInteger)isrecord;
+-(instancetype _Nullable ) initABCLivingManager:(NSString *_Nullable) rid isPush:(BOOL) isPush isSuperManager:(BOOL) isSuperManager isrecord:(NSInteger)isrecord;
 
-/**
- *  切换用户
- *
- *  @param openId    openid
- *  @param nickName  nickName
- *  @param avatarUrl 用户头像
- *  @param success   成功回调
- *  @param fail      失败回调
- */
--(void) resetUserByOpenid:(NSString *) openId
-                 nickName:(NSString *) nickName
-                avatarUrl:(NSString *) avatarUrl
-                  success:(void (^)(id responseObject))success
-                  failure:(void (^)(ABCErrorCode errorCode,NSString *strMsg))fail;
+///**
+// *  切换用户
+// *
+// *  @param openId    openid
+// *  @param nickName  nickName
+// *  @param avatarUrl 用户头像
+// *  @param success   成功回调
+// *  @param fail      失败回调
+// */
+//-(void) resetUserByOpenid:(NSString *) openId
+//                 nickName:(NSString *) nickName
+//                avatarUrl:(NSString *) avatarUrl
+//                  success:(void (^)(id responseObject))success
+//                  failure:(void (^)(ABCErrorCode errorCode,NSString *strMsg))fail;
 
 /**
  *  连接到直播间
@@ -55,7 +55,7 @@
  *
  *  @param videoView UIView
  */
--(void) setLivingView:(UIView *) videoView;
+-(void) setLivingView:(UIView *_Nullable) videoView;
 
 /**
  *  切换摄像头
@@ -95,14 +95,14 @@
  *
  *  @param msg 消息内容
  */
--(void) sendMessage:(NSString *) msg;
+-(void) sendMessage:(NSString *_Nullable) msg;
 
 /**
  *  踢出用户
  *
  *  @param uid 用户id
  */
--(void) kickedOutStudent:(NSString *) uid;
+-(void) kickedOutStudent:(NSString *_Nullable) uid;
 
 /**
  *  禁止用户聊天/取消
@@ -110,15 +110,15 @@
  *  @param userId   用户id
  *  @param isForBid 禁止与否
  */
--(void) forbidUserChat:(NSString *) userId isForbid:(BOOL) isForBid;
+-(void) forbidUserChat:(NSString *_Nullable) userId isForbid:(BOOL) isForBid;
 
--(ABCLiveUserMo *) getLiveUserMoById:(NSString *) userId;
+-(ABCLiveUserMo *_Nullable) getLiveUserMoById:(NSString *_Nullable) userId;
 
 #pragma mark - 答题卡
 /**
  * 发送答题卡
  */
--(void) sendQuestionCard:(NSInteger) type selectcount:(NSInteger) selectcount answers:(NSString *) answers;
+-(void) sendQuestionCard:(NSInteger) type selectcount:(NSInteger) selectcount answers:(NSString *_Nullable) answers;
 
 /**
  * 发送停止答题卡
@@ -133,6 +133,6 @@
 /**
  * 发送答案
  */
--(void) sendQuestionAnswers:(NSString *)answers seq:(NSInteger)seq;
+-(void) sendQuestionAnswers:(NSString *_Nullable)answers seq:(NSInteger)seq;
 
 @end

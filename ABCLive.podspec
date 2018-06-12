@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ABCLive"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "ABCLive."
   s.description      = "ABCLive of bing"
   s.homepage         = "http://www.abcpen.com"
@@ -21,6 +21,13 @@ Pod::Spec.new do |s|
     sp.public_header_files = 'ABCLiveSDK/ABCUIKit.framework/Headers/ABCUIKit.h'
     sp.source_files        = 'ABCLiveSDK/ABCUIKit.framework/Headers/*.{h}'
     sp.vendored_frameworks = 'ABCLiveSDK/ABCUIKit.framework'
+    sp.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO' }
+  end
+
+  s.subspec 'ABCLivePenKit' do |sp|
+    sp.public_header_files = 'ABCLiveSDK/PenKit.framework/Headers/PenKit.h'
+    sp.source_files        = 'ABCLiveSDK/PenKit.framework/Headers/*.{h}'
+    sp.vendored_frameworks = 'ABCLiveSDK/PenKit.framework'
     sp.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO' }
   end
 

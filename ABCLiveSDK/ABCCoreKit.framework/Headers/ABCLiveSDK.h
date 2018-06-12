@@ -146,10 +146,6 @@
                   failure:(void (^)(NSString *strMsg))fail
                  progress:(void (^)(float))progress;
 
--(void) roomGetRoomByRoomId:(NSString *) roomId
-                    success:(void (^)(id responseObject))success
-                    failure:(void (^)(ABCErrorCode errorCode,NSString *strMsg))fail;
-
 -(void) getWbRecordResourceByRoomId:(NSString *) roomId
                             success:(void (^)(id responseObject))success
                             failure:(void (^)(ABCErrorCode errorCode,NSString *strMsg))fail;

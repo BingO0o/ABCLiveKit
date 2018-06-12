@@ -1,0 +1,6 @@
+framework module PenKit {
+  umbrella header "PenKit.h"
+
+  export *
+  module * { export * }
+}
