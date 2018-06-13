@@ -19,8 +19,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [ABCLiveSDK shareABCLiveSDK].isDebug = YES;
-    [ABCLiveSDK shareABCLiveSDK].isLocal = YES;
     if([ABCLiveSDK shareABCLiveSDK].isLogin){
         self.window.rootViewController = [[MainViewController alloc] init];
         [self.window makeKeyAndVisible];
