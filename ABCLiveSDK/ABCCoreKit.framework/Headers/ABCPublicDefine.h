@@ -68,7 +68,8 @@ typedef NS_ENUM(NSInteger ,ABCLiveErrorCode){
     ABCLiveErrorCode_loginFail,
     ABCLiveErrorCode_loginOtherDevice,
     ABCLiveErrorCode_getLivingUrlFail,
-    ABCLiveErrorCode_serverFail
+    ABCLiveErrorCode_serverFail,
+    ABCLiveErrorCode_tokenExpired
 };
 
 typedef NS_ENUM(NSInteger ,ABCVideoStatus){
@@ -118,15 +119,7 @@ typedef NS_ENUM(NSInteger ,ABCVideoBufferStatus){
 
 typedef NS_ENUM(NSInteger, ABCErrorCode) {
     ABCErrorCode_REQUEST_ERROR        = -10000, //请求失败
-    ABCErrorCode_COOKIE_INVALID       = -1001, //COOKIE 失效
-    ABCErrorCode_COOKIE_VALIDATE      = -1002, //非法COOKIE
-    ABCErrorCode_LOGIN_FAULED         = 10401, //登录失败
-    ABCErrorCode_LOGINED_OTHER_DEVICE = 10403, //用户在其他地方登录了
-    ABCErrorCode_LOGINED_NOT_LOGIN    = 10404, //用户未登录
-    
-    ABCErrorCode_APPID_EMPTY          = 10415, //appid 为空
-    ABCErrorCode_APPSECRET_EMPTY      = 10416, //appSecret 为空
-    ABCErrorCode_APP_VERFY_FAIL       = 10417 //appid 或 app_secret不正确
+    ABCErrorCode_COOKIE_EXPIRED       = 10006, //TOKEN 过期
 };
 
 /// 视频分辨率(都是16：9 当此设备不支持当前分辨率，自动降低一级)

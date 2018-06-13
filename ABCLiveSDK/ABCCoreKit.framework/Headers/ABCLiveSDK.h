@@ -45,7 +45,7 @@
  */
 -(void) loginByWebScan:(NSString *) verifyCode
                success:(void (^)(id responseObject))success
-               failure:(void (^)(ABCErrorCode errorCode,NSString *strMsg))fail;
+               failure:(void (^)(int errorCode,NSString *strMsg))fail;
 
 /**
  *  创建新的课程（房间）
@@ -63,7 +63,7 @@
           endTime:(long) endTime
          duration:(NSInteger) duration
           success:(void (^)(id responseObject))success
-          failure:(void (^)(ABCErrorCode errorCode,NSString *strMsg))fail;
+          failure:(void (^)(int errorCode,NSString *strMsg))fail;
 
 /**
  *  上传文件到ABC云盘（PDF，xls,doc,ppt）
@@ -148,12 +148,12 @@
 
 -(void) getWbRecordResourceByRoomId:(NSString *) roomId
                             success:(void (^)(id responseObject))success
-                            failure:(void (^)(ABCErrorCode errorCode,NSString *strMsg))fail;
+                            failure:(void (^)(int errorCode,NSString *strMsg))fail;
 
 -(void) getOnlineUsers:(NSString *) roomId
                 pageNo:(NSInteger) pageNo
               pageSize:(NSInteger) pageSize
                success:(void (^)(id responseObject))success
-               failure:(void (^)(ABCErrorCode errorCode,NSString *strMsg))fail;
+               failure:(void (^)(int errorCode,NSString *strMsg))fail;
 
 @end
