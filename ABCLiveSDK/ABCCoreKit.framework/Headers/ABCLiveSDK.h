@@ -12,7 +12,15 @@
 
 @class ABCRoomMo;
 
+@protocol ABCTokenDataDelegate <NSObject>
+@optional
+-(void) refreshNewToken:(void (^)(NSString *token))success
+                failure:(void (^)(NSString *msg))fail;
+@end
+
 @interface ABCLiveSDK : NSObject
+
+@property (nonatomic, weak )id<ABCTokenDataDelegate> delegate;
 
 @property (nonatomic, strong ) NSString *appId;
 @property (nonatomic, strong ) NSString *appSecret;
