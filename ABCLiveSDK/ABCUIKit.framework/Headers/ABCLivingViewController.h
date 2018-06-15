@@ -17,4 +17,6 @@
 
 -(instancetype) initABCLivingViewCtrlWithRoomMo:(ABCRoomMo *) roomMo;
 
+- (void)closeRoom:(BOOL) isNeedSend needDismiss:(BOOL)needDismiss;
+
 @end
