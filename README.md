@@ -27,9 +27,9 @@ Version | Date |Changed By |Changes
 ```
 ### pod导入
 ~~~
-pod 'ABCLive/ABCLiveCoreKit', '~>1.0.3'
-pod 'ABCLive/ABCLiveUIKit', '~>1.0.3'
-pod 'ABCLive/ABCLivePenKit', '~>1.0.3'
+pod 'ABCLive/ABCLiveCoreKit'
+pod 'ABCLive/ABCLiveUIKit'
+pod 'ABCLive/ABCLivePenKit'
 
 由于SocketIO.framework 是swift库，请使用Embedded Binaries 导入，并在TARGETS->Build Settings ->Always Embed Swift Standard Libraries 设置为YES
 ~~~
